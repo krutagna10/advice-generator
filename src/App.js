@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <main className="app" style={{ maxWidth: "32rem" }}>
+    <main>
       <Card data={data} onClick={handleClick} />
     </main>
   );

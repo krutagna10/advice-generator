@@ -1,0 +1,32 @@
+.card {
+  text-align: center;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--dark-grayish-blue);
+  position: relative;
+  min-height: 22.5rem;
+  max-width: 32rem;
+}
+
+.card__advice-number {
+  color: var(--neon-green);
+}
+
+.card__btn {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
+}
+
+.card__btn::before {
+  content: "";
+  position: absolute;
+  background-color: var(--neon-green);
+  inset: 0;
+  scale: 2.25;
+  border-radius: 50%;
+  z-index: -1;
+}

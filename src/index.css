@@ -33,9 +33,11 @@ html {
 }
 
 body {
+  font-family: var(--font-manrope);
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
   min-height: 100vh;
   line-height: 1.5;
-  font-family: var(--font-manrope);
   position: relative;
   display: grid;
   place-content: center;
