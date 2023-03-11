@@ -11,7 +11,7 @@
 
 ### What I Learned
 - What are promises
-- How to fetch data using from url
+- How to fetch data from a url
 - Error handling while fetching data
 - What is cache: {"no-cache"} inside fetch
 
