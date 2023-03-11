@@ -1,5 +1,5 @@
 .card {
-  min-width: min(clamp(100vw - 0.75rem), 32rem);
+  min-width: min(calc(100vw - 0.75rem), 32rem);
   max-width: 32rem;
   min-height: 23rem;
 

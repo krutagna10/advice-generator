@@ -36,6 +36,7 @@ function App() {
 
   return (
     <main>
+      <h1 className="visually-hidden">Advice Generator</h1>
       <Card data={data} onClick={handleClick} />
     </main>
   );
