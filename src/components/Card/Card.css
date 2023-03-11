@@ -1,5 +1,9 @@
+.card-section {
+  border: 1px solid red;
+}
+
 .card {
-  min-width: min(calc(100vw - 0.75rem), 32rem);
+  min-width: min(calc(100vw - 1rem), 32rem);
   max-width: 32rem;
   min-height: 23rem;
 
@@ -10,7 +14,7 @@
   text-align: center;
   position: relative;
 
-  margin-inline: 1rem;
+  border: 1px solid var(--neon-green);
 }
 
 .card__advice-number {
