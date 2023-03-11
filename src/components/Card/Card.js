@@ -14,7 +14,7 @@ const Card = ({ data, onClick }) => {
           <img src={dividerMobile} aria-hidden="true" alt="" />
         </picture>
         <button className="card__btn" onClick={onClick}>
-          <img src={iconDice} alt="Dice" />
+          <img className="card__btn-image" src={iconDice} alt="Dice" />
         </button>
       </div>
     </section>

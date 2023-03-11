@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   const handleClick = () => {
-    fetchData();
+    setTimeout(fetchData, 1000);
   };
 
   if (isLoading) {

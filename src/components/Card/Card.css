@@ -1,9 +1,5 @@
-.card-section {
-  padding-inline: 1rem;
-}
-
 .card {
-  min-width: min(100vw, 32rem);
+  min-width: min(clamp(100vw - 0.75rem), 32rem);
   max-width: 32rem;
   min-height: 23rem;
 
@@ -13,6 +9,8 @@
   border-radius: 0.75rem;
   text-align: center;
   position: relative;
+
+  margin-inline: 1rem;
 }
 
 .card__advice-number {
@@ -32,6 +30,15 @@
   left: 50%;
   bottom: -3.5%;
   transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.card__btn-image {
+  transition: all 0.5s ease;
+}
+
+.card__btn:focus .card__btn-image {
+  transform: rotate(180deg);
 }
 
 .card__btn::before {
@@ -42,4 +49,9 @@
   scale: 2.25;
   border-radius: 50%;
   z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.card__btn:hover::before {
+  box-shadow: 0 0 10px var(--neon-green);
 }
