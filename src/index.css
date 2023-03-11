@@ -6,6 +6,15 @@
   --dark-blue: hsl(218, 23%, 16%);
 
   --font-manrope: "Manrope", sans-serif;
+
+  --font-size-200: 1.5rem;
+  --font-size-100: 0.8125rem;
+}
+
+@media (min-width: 48em) {
+  :root {
+    --font-size-200: 1.75rem;
+  }
 }
 
 *,
@@ -41,8 +50,23 @@ body {
   position: relative;
   display: grid;
   place-content: center;
+  font-weight: 800;
 }
 
 button {
   cursor: pointer;
+}
+
+/* Background Utility*/
+.background-grayish-blue {
+  background-color: var(--dark-grayish-blue);
+}
+
+/* Grid Utility */
+.grid {
+  display: grid;
+}
+
+.grid--items-center {
+  place-items: center;
 }
