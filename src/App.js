@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Card from "./components/Card/Card";
 
 const url = "https://api.adviceslip.com/advice";
 
@@ -8,16 +9,17 @@ function App() {
 
   const fetchData = async () => {
     setIsLoading(true);
-    try {
-      const response = await fetch(url, { cache: "no-cache" });
-      const data = await response.json();
-      setData(data.slip);
-      console.log(data.slip);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
+
+    fetch(url, { cache: "no-cache" })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Data not found");
+      })
+      .then((data) => setData(data.slip))
+      .catch((error) => alert(`${error.name}: ${error.message}`))
+      .finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
@@ -33,11 +35,9 @@ function App() {
   }
 
   return (
-    <div className="app" style={{ maxWidth: "32rem" }}>
-      <p>Advice Number: {data.id}</p>
-      <h1>{data.advice}</h1>
-      <button onClick={handleClick}>Generate Advice</button>
-    </div>
+    <main className="app" style={{ maxWidth: "32rem" }}>
+      <Card data={data} onClick={handleClick} />
+    </main>
   );
 }
 
