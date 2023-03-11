@@ -38,7 +38,7 @@
 }
 
 .card__btn:focus .card__btn-image {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .card__btn::before {
