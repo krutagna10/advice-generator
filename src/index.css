@@ -79,10 +79,6 @@ body {
   border: 0 !important;
 }
 
-button {
-  cursor: pointer;
-}
-
 /* Background Utility*/
 .background-grayish-blue {
   background-color: var(--dark-grayish-blue);
