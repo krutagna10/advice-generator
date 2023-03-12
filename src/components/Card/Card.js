@@ -8,9 +8,9 @@ const Card = ({ data, onClick }) => {
     <section className="card-section">
       <div className="card grid grid--items-center background-grayish-blue">
         <p className="card__advice-number">Advice #{data.id}</p>
-        <h1 className="card__advice">"{data.advice}"</h1>
+        <h2 className="card__advice">"{data.advice}"</h2>
         <picture className="card__divider-picture">
-          <source media="(min-width: 48em)" src={dividerDesktop} />
+          <source media="(min-width: 48em)" srcSet={dividerDesktop} />
           <img
             className="card__divider-image"
             src={dividerMobile}
